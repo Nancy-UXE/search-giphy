@@ -1,0 +1,16 @@
+<!-- Section -->
+<section  *ngIf="results">
+    <header class="major"> <br/>
+        <!-- <h2>Search Results for "{{searchInput.value}}"</h2> -->
+        <h2>Search Results</h2>
+    </header>
+    <div class="posts">
+        <div *ngFor="let result of results">
+            <article  *ngIf="result.images.preview_webp">
+            <img src="{{result.images.preview_webp.url}}"> 
+            <h3>{{result.title}}</h3>
+            </article>
+        </div>
+    </div>
+    <br><hr>
+</section>	

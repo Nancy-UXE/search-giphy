@@ -11,20 +11,22 @@ import { ConfigService } from './config/config.service';
 export class AppComponent {
   error: any;
   results: any | undefined;
-  searchInput: string = '';
+  searchInput: any | undefined;
   showSidebar: boolean = false;
 
   constructor(private configService: ConfigService) {}
 
   title = 'search-giphy';
 
-  showConfig(query:any) {
+  onSearch(query:any) {
+    this.searchInput = query;
     this.configService.getConfig(query)
       .subscribe({
         next: (data: any) =>this.results = { ...data }, // success path
         error: error => this.error = error, // error path
       });
   }
+
 
   toggleSidebar(){
     this.showSidebar = !this.showSidebar;
