@@ -6,4 +6,5 @@ Building a project to read from Giphy API, and passing the data thru component i
 
 
 ### Demo:
-Check the demo here please: http://g.recordit.co/MJFGXtUb5B.gif
+
+![](https://github.com/Nancy-UXE/search-giphy/blob/main/src/demo.gif)
