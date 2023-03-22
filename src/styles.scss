@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../src/assets/libs/vars';
+@import '../src/assets/libs/functions';
+@import '../src/assets/libs/mixins';
+@import '../src/assets/libs/vendor';
+@import '../src/assets/libs/breakpoints';
+@import '../src/assets/libs/html-grid';
+@import '../src/assets/fontawesome-all.min.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700');
+
+
+// Breakpoints.
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 981px,   1280px ),
+    medium:   ( 737px,   980px  ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( 361px,   480px  ),
+    xxsmall:  ( null,    360px  ),
+    xlarge-to-max:    '(min-width: 1681px)',
+    small-to-xlarge:  '(min-width: 481px) and (max-width: 1680px)'
+));
+
+@import '../src/assets/base/reset';
+@import '../src/assets/base/page';
+@import '../src/assets/base/typography';
+
+// Component.
+
+@import '../src/assets/components/section';
+@import '../src/assets/components/form';
+@import '../src/assets/components/icon';
+@import '../src/assets/components/list';
+@import '../src/assets/components/icons';
+@import '../src/assets/components/contact';
+@import '../src/assets/components/posts';
+
+// Layout.
+
+@import '../src/assets/layout/wrapper';
+@import '../src/assets/layout/main';
+@import '../src/assets/layout/sidebar';
+@import '../src/assets/layout/header';
+@import '../src/assets/layout/banner';
+@import '../src/assets/layout/footer';
+@import '../src/assets/layout/menu';

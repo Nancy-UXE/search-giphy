@@ -9,8 +9,8 @@ export class ConfigService {
 
   configUrl = 'https://api.giphy.com/v1/gifs/search';
 
-getConfig(query:any) {
-  return this.http.get<any>(this.configUrl, {params: {api_key:'Av5w6YVdI9tHKM4UM5m6Nu8cUQ3Ot5Fw', q:query} });
-}
+  getConfig(query:any) {
+    return this.http.get<any>(this.configUrl, {params: {api_key:'Av5w6YVdI9tHKM4UM5m6Nu8cUQ3Ot5Fw', q:query} });
+  }
 }
 
