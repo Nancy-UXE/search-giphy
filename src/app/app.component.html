@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>eBay Homework</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Search</strong> Giphy</a>
+									<!-- Search -->
+									<section id="search" class="alt">
+										<input #searchInput type="text" name="query" id="query" placeholder="Search" (keydown.enter)="showConfig(searchInput.value)"/>
+									</section>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Section -->
+							<section  *ngIf="results">
+								<header class="major">
+									<h2>Search Results for "{{searchInput.value}}"</h2>
+								</header>
+								<div class="posts">
+									<div *ngFor="let result of results.data">
+										<article  *ngIf="result.images.preview_webp">
+										<img src="{{result.images.preview_webp.url}}"> 
+										<h3>{{result.title}}</h3>
+										</article>
+									</div>
+								</div>
+							</section>							
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Hi, I am the creator of the search Giphy app</h1>
+											<p>Please have fun using it, you can search any word and see the gifs related to it! Exciting!</p>
+										</header>
+										<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="../assets/images/pic10.jpg" alt="" />
+									</span>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<a href="#" class="toggle"  ></a>
+				<div id="sidebar" >
+					<div class="inner">
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									<li><a href="#">Inner Page 1</a></li>
+									<li><a href="#">Inner Page 2</a></li>
+									<li><a href="#">Inner Page 3</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>For more information please call me or contact me through email.</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="mailto:nancy.uxe@gmail.com" target="_blank">nancy.uxe@gmail.com</a></li>
+									<li class="icon solid fa-phone">(408) 306-6691</li>
+									<li class="icon solid fa-home">Bay Area</li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Search Giphy for eBay</p>
+							</footer>
+					</div>
+				</div>
+			</div>
+		<!-- Scripts -->
+	</body>
+</html>

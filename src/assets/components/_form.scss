@@ -1,0 +1,29 @@
+
+/* Form */
+
+
+	input[type="text"] {
+		@include vendor('appearance', 'none');
+		background: _palette(bg);
+		border-radius: _size(border-radius);
+		border: none;
+		border: solid 1px _palette(border);
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0 1em;
+		text-decoration: none;
+		width: 100%;
+		height: _size(element-height);
+
+
+		&:invalid {
+			box-shadow: none;
+		}
+
+		&:focus {
+			border-color: _palette(accent);
+			box-shadow: 0 0 0 1px _palette(accent);
+		}
+	}
+
