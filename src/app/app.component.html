@@ -65,8 +65,8 @@
 					</div>
 
 				<!-- Sidebar -->
-				<a href="#" class="toggle"  ></a>
-				<div id="sidebar" >
+				<a href="#" class="toggle" (click)="toggleSidebar()"  ></a>
+				<div id="sidebar" [ngClass]="{'showside' : showSidebar}" >
 					<div class="inner">
 						<!-- Menu -->
 							<nav id="menu">

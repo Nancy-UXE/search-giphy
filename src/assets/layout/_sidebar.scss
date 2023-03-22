@@ -167,6 +167,9 @@
 			top: 60px;
 			z-index: _misc(z-index-base);
 			display: none;
+			&.showside {
+				display: block;
+			}
 
 			&.inactive {
 				box-shadow: none;
