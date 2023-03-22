@@ -19,9 +19,7 @@
 								<header id="header">
 									<a href="index.html" class="logo"><strong>Search</strong> Giphy</a>
 									<!-- Search -->
-									<section id="search" class="alt">
-										<input #searchInput type="text" name="query" id="query" placeholder="Search" (keydown.enter)="showConfig(searchInput.value)"/>
-									</section>
+									<app-search (newSearchEvent)="onSearch($event)"></app-search>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -31,20 +29,8 @@
 									</ul>
 								</header>
 
-							<!-- Section -->
-							<section  *ngIf="results">
-								<header class="major">
-									<h2>Search Results for "{{searchInput.value}}"</h2>
-								</header>
-								<div class="posts">
-									<div *ngFor="let result of results.data">
-										<article  *ngIf="result.images.preview_webp">
-										<img src="{{result.images.preview_webp.url}}"> 
-										<h3>{{result.title}}</h3>
-										</article>
-									</div>
-								</div>
-							</section>							
+								<app-results [results]="results?.data"></app-results>
+						
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
