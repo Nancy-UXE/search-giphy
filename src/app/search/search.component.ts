@@ -22,14 +22,4 @@ export class SearchComponent {
   search(value: string) {
     this.newSearchEvent.emit(value);
   }
-
-  // showConfig(query:any) {
-  //   this.configService.getConfig(query)
-  //     .subscribe({
-  //       next: (data: any) =>this.results = { ...data }, // success path
-  //       error: error => this.error = error, // error path
-  //     });
-  // }
-
-
 }
