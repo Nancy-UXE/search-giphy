@@ -11,7 +11,8 @@ import { ConfigService } from './config/config.service';
 export class AppComponent {
   error: any;
   results: any | undefined;
-  searchInput: string | undefined;
+  searchInput: string = '';
+  showSidebar: boolean = false;
 
   constructor(private configService: ConfigService) {}
 
@@ -20,9 +21,13 @@ export class AppComponent {
   showConfig(query:any) {
     this.configService.getConfig(query)
       .subscribe({
-        next: (data: any) => this.results = { ...data }, // success path
+        next: (data: any) =>this.results = { ...data }, // success path
         error: error => this.error = error, // error path
       });
+  }
+
+  toggleSidebar(){
+    this.showSidebar = !this.showSidebar;
   }
 
 }
